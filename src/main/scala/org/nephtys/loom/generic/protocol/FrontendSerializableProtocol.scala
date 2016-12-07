@@ -5,7 +5,7 @@ import org.nephtys.loom.generic.protocol.InternalStructures.FailableList
 /**
   * Created by nephtys on 12/4/16.
   */
-trait FrontendSerializableProtocol[Agg <: Aggregate] {
+trait FrontendSerializableProtocol[Agg <: Aggregate[Agg]] {
 
   protocol : Protocol[Agg] =>
 

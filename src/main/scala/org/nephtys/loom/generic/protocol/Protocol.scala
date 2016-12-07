@@ -7,13 +7,13 @@ import scala.util.{Failure, Try}
 /**
   * Created by nephtys on 12/4/16.
   */
-trait Protocol[T <: Aggregate] extends Ordered[Protocol[T]] {
+trait Protocol[T <: Aggregate[T]] extends Ordered[Protocol[T]] {
 
   type Aggregates = Map[ID[T], T]
 
   val endpointRoot : EndpointRoot
 
-  trait Command extends IDable[T]{
+  trait Command extends IDable[T, T]{
     def validate(user : Email, aggregate : Aggregates) : Try[Event] = {
       if (verifyAccess(user, aggregate)) {
         validateInternal(aggregate)
@@ -29,7 +29,7 @@ trait Protocol[T <: Aggregate] extends Ordered[Protocol[T]] {
     }
   }
 
-  trait Event extends IDable[T]{
+  trait Event extends IDable[T, T]{
     def commit(aggregate : Aggregates) : Aggregates
   }
 

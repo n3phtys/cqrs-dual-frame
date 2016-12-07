@@ -7,7 +7,7 @@ import scala.language.higherKinds
 /**
   * Created by nephtys on 12/4/16.
   */
-trait Frontend[Agg <: Aggregate] {
+trait Frontend[Agg <: Aggregate[Agg]] {
 
   protocol : FrontendSerializableProtocol[Agg] with Protocol[Agg] =>
 

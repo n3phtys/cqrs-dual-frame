@@ -7,7 +7,7 @@ import scala.language.higherKinds
 /**
   * Created by nephtys on 12/4/16.
   */
-trait Backend[Agg <: Aggregate] {
+trait Backend[Agg <: Aggregate[Agg]] {
 
   protocol : Protocol[Agg] =>
 
