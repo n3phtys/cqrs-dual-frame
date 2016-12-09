@@ -1,8 +1,11 @@
 package org.nephtys.loom.shared.api.InternalDataStructures
 
+import scala.scalajs.js.annotation.JSExportAll
+
 /**
   * Created by nephtys on 12/4/16.
   */
+@JSExportAll
 object HttpResults {
 
   case class ETag(content : String) extends AnyVal
