@@ -97,7 +97,7 @@ trait Protocol[T <: Aggregate[T]] extends Ordered[Protocol[T]] {
     }
 
 
-    def commitInternal(old : EventInput) : T
+    def commitInternal(input : EventInput) : T
   }
 
   override def compare(that: Protocol[T]): Int = {
