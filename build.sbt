@@ -2,7 +2,7 @@ import sbt.Keys._
 
 name := "cqrs-dual-frame"
 
-scalaVersion in ThisBuild := "2.11.8"
+scalaVersion in ThisBuild := "2.12.1"
 
 
 
@@ -26,7 +26,7 @@ lazy val cqrsdualframe = crossProject.in(file(".")).
 
     libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0",
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0" % "test",
-    libraryDependencies += "com.lihaoyi" %% "upickle" % "0.4.3",
+    libraryDependencies += "com.lihaoyi" %% "upickle" % "0.4.4",
 
     scalacOptions ++= Seq("-deprecation", "-encoding", "UTF-8", "-feature", "-target:jvm-1.8", "-unchecked",
       "-Ywarn-adapted-args", "-Ywarn-value-discard", "-Xlint")
