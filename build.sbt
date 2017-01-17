@@ -2,7 +2,7 @@ import sbt.Keys._
 
 name := "cqrs-dual-frame"
 
-scalaVersion in ThisBuild := "2.11.8"
+scalaVersion in ThisBuild := "2.12.1"
 
 
 

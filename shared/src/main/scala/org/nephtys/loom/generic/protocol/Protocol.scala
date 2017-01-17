@@ -62,7 +62,7 @@ trait Protocol[T <: Aggregate[T]] extends Ordered[Protocol[T]] {
 
     //the following method is used for authorization on commands
     def verifyAccess(user : Email, aggregate : T) : Boolean = {
-      aggregate.owner.email == user.email
+      aggregate.metaInfo.owner.email == user.email
     }
   }
 

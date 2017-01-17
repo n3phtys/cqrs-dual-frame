@@ -5,10 +5,7 @@ package org.nephtys.loom.generic.protocol.InternalStructures
   */
 trait Owned {
 
-  def owner : Email
-  def public : Boolean
-  def readers : Set[Email]
-
+  def metaInfo : MetaInfo
 
 
 }
